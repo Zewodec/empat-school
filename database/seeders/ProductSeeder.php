@@ -26,8 +26,5 @@ class ProductSeeder extends Seeder
             ]);
 
         }
-
-
-//        Product::factory()->count($amount)->create();
     }
 }

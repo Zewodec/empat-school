@@ -4,10 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use function MongoDB\BSON\toJSON;
-use function Pest\Laravel\json;
-use function PHPUnit\Framework\isEmpty;
-use function PHPUnit\Framework\isNull;
 
 class ProductController extends Controller
 {
@@ -73,7 +69,6 @@ class ProductController extends Controller
 
     public function patchProduct($categoryId, $productId, Request $request)
     {
-//        $product = Product::where('category_id', $categoryId)->where('id', $productId)->first();
         $product = Product::find($productId);
 
         if(!$product) {
